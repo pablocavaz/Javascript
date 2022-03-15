@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circulito2.0</title>
+    <style>
+        #resultados {visibility: hidden;}
+        #radio  {margin: 2em;}
+    </style>
+</head>
+<body>
+    <!--Controles para cambiar el estilo-->
+    <span>Elige tu paleta de colores:</span>
+    <button onclick="cambiaColor('orange','yellow')">Calidos</button>
+    <button onclick="cambiaColor('lightblue','purple')">Frios</button>
+    <button onclick="cambiaColor('lightgray','gray')">light</button>
+    <button onclick="cambiaColor('black','gainsboro')">dark</button>
+
+
+    <!--la pagina en si -->
+    <h1>Javascript para calcular circunferencias</h1>
+    <form action="">
+        <label for="">Dame el radio: </label><!--etiqueta informativa-->
+        <input type="text" id="radio"><!--Dato de entrada-->
+    </form>
+    <button onclick="circulito()">Calcula</button>
+    <ul id="resultados">
+        <li id="circunfe"></li>
+        <li id="circulo"></li>
+        <li id="esfera"></li>
+    </ul>
+
+    <!--Este es el script para cambios en el estilo-->
+    <script>
+        /*Este codigo funciona pero es ineficiente repetitivo y es una mierda
+            function calidos(){
+                document.body.style.backgroundColor="orange"
+                document.body.style.color="yellow"
+            }
+
+            function frios(){
+                document.body.style.backgroundColor="lightblue"
+                document.body.style.color="purple"
+
+            }
+
+            function light(){
+                document.body.style.backgroundColor="lightgray"
+                document.body.style.color="gray"
+            }
+
+            function dark(){
+                document.body.style.backgroundColor="black"
+                document.body.style.color="gainsboro"
+            }
+            */
+
+            function cambiaColor (fondo,texto){
+                document.body.style.backgroundColor=fondo;
+                document.body.style.color=texto;
+            }
+
+    </script>
+
+
+
+
+    <!--Este es el script para calcular-->
+    <script>
+        function circulito(){
+        /*algoritmo secuencial para calcular el volumen de una circunferencia: 
+                -la longitud de la circunferencia
+                -el area de una circunferencia
+                -el volumen de una circunferencia
+                version2.0
+
+                    Con formulario de entrada
+
+        /*entrada de datos*/
+        //let radio=Number(prompt("Inserte el radio de la circunferencia : "));
+        let radio=Number(document.getElementById("radio").value);
+        const PI=3.1416;
+
+        /*calculo interno*/
+        let circunferencia=2*PI*radio;
+        let circulo=(radio**2)*PI
+        let esfera=(4*radio**3*PI)/3
+
+        /*mostramos el resultado*/
+        document.getElementById("resultados").style.visibility="visible"
+        document.getElementById("circunfe").innerHTML="La circunferencia es: "+circunferencia+"cm";
+        document.getElementById("circulo").innerHTML="La circunferencia es: "+circulo+"cm";
+        document.getElementById("esfera").innerHTML="La circunferencia es: "+esfera+"cm cúbicos";
+        }
+    
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizando Arrays para cambiar estilos de páginas</title>
+</head>
+<body>
+    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione tenetur, ipsum nemo dicta consequuntur velit eius tempora natus officiis explicabo quasi vitae fuga numquam! Aut laborum placeat atque labore unde.</p>
+
+    <p> Itaque ad minima eius blanditiis cum nobis, neque numquam, iusto excepturi ea delectus temporibus recusandae dolorum, enim cumque similique rem veritatis dolores quisquam iste nihil doloremque rerum maxime explicabo? Rerum?</p>
+
+    <p> Nostrum eveniet accusamus nam exercitationem quas obcaecati quidem autem odio. Explicabo magni tempora repellat incidunt molestiae voluptatem repudiandae dicta! Dolor, minima! Nostrum aperiam modi est quas a rerum veniam cum.</p>
+
+    <p> Adipisci vero deleniti aperiam vel repudiandae culpa officia aliquid inventore, illo amet rem voluptas necessitatibus dolorum doloremque, minima autem maxime quibusdam, optio veritatis incidunt voluptates repellat. Amet officia labore quasi?</p>
+
+    <p> Consequuntur minima veniam, quo quas quidem architecto amet, eligendi rerum, ipsum vero eius! Et beatae quibusdam obcaecati voluptatibus illo similique velit repudiandae! Quia, quae. Expedita, repellendus? Omnis quod expedita reiciendis?</p>
+    <h3>Cambiando tamño del texto</h3>
+    <button onclick="agrandaParrafo()">+ grande</button>
+    <button onclick="resetParrafo()">=reset</button>
+    <button onclick="reduceParrafo()">- grande</button>
+
+    <script>
+        function agrandaParrafo(){
+            // con el método getElementByTagName, capturo
+            //TODOS los párrafos de la página
+            let parrafos=document.getElementsByTagName("p");
+            for (i=0;i<parrafos.length;i++){
+                parrafos[i].style.fontSize="1.2em";
+            }
+        }
+
+        function resetParrafo(){
+            // con el método getElementByTagName, capturo
+            //TODOS los párrafos de la página
+            let parrafos=document.getElementsByTagName("p");
+            for (i=0;i<parrafos.length;i++){
+                parrafos[i].style.fontSize="1em";
+            }
+        }
+
+
+        function reduceParrafo(){
+            // con el método getElementByTagName, capturo
+            //TODOS los párrafos de la página
+            let parrafos=document.getElementsByTagName("p");
+            for (i=0;i<parrafos.length;i++){
+                parrafos[i].style.fontSize="0.8em";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

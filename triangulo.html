@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área del triángulo</title>
+</head>
+<body>
+    <h1>Javascript para calcular el área de un triángulo</h1>
+    <button onclick="areaTriangulo()">Calcula</button>
+    <p id="resultado"></p>
+    <script>
+        function areaTriangulo(){
+        /*algoritmo secuencial para calcular el area de un triangulo versión: 2.0
+        Modificaciones: -Entrada de datos vía prompt
+                        -salida de resultado EN EL PROPIO DOCUMENTO*/
+
+        /*entrada de datos*/
+        var base=prompt("Dame la base: ");
+        var altura=prompt("Dame la altura: ");
+
+        /*calculo interno*/
+        area = base * altura / 2
+
+        /*mostramos el resultado*/
+        document.getElementById("resultado").innerHTML="El resultado es: "+area;
+        }
+
+
+    </script>
+</body>
+</html>

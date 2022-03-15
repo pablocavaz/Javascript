@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longitud Circulo</title>
+</head>
+<body>
+    <h1>Javascript para calcular el araea de una circunferencia</h1>
+    <button onclick="area()">Calcula</button>
+    <p id="resultado"></p>
+    <script>
+        function area(){
+        /*algoritmo secuencial para calcular la media aritmetica de dos numeros: 2.0
+        Modificaciones: -Entrada de datos vía prompt
+                        -salida de resultado EN EL PROPIO DOCUMENTO*/
+
+        /*entrada de datos*/
+        var num1=Number(prompt("Inserte el radio de la circunferencia: "));
+        const PI=3.1416;
+
+        /*calculo interno*/
+        total = PI * (num1 * num1)
+
+        /*mostramos el resultado*/
+        document.getElementById("resultado").innerHTML="El area del circulo es: "+total;
+        }
+
+
+    </script>
+</body>
+</html>
